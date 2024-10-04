@@ -10,6 +10,17 @@ class Solution_13 {
         hashTable["D"] = 500
         hashTable["M"] = 1000
         
+//        let hashTable: [Character:Int] =
+//        [
+//        "I" : 1,
+//        "V" : 5,
+//        "X" : 10,
+//        "L" : 50,
+//        "C" : 100,
+//        "D" : 500,
+//        "M" : 1000
+//        ]
+        
         var current = -1
         var previous = -1
         var sum = 0
