@@ -36,3 +36,37 @@ class Solution_202 {
         return true
     }
 }
+
+// Slow fast poiner approach
+
+class Solution_202_new {
+    func isHappy(_ n: Int) -> Bool {
+        
+        var fast = n
+        var slow = n
+        
+    
+        repeat{
+            slow = helper(slow)
+            fast = helper(helper(fast))
+        }while fast != slow
+        
+        
+        
+        
+        func helper(_ n:Int)->Int{
+            var ans = 0
+            var n = n
+            while n != 0 {
+                let temp = n % 10
+                ans += temp * temp
+                n = n/10
+                
+            }
+            
+            return ans
+        }
+        
+        return slow == 1
+    }
+}
