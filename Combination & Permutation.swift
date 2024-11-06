@@ -1,4 +1,4 @@
-func permute<T>(_ elements: [T]) -> [[T]] {
+func permute<T>(_ elements: [T]) -> [[T]] { // permutation = position metters
     var result = [[T]]()   // To store the final permutations
     var current = elements // Create a mutable copy of the input elements for swapping
 
@@ -26,7 +26,7 @@ func permute<T>(_ elements: [T]) -> [[T]] {
 // Example usage
 let elements = ["a", "b", "c"]
 let permutations = permute(elements)
-print(permutations) // [[-1, -1, 2], [-1, 0, 1]]
+print(permutations) // [["a", "b", "c"], ["a", "c", "b"], ["b", "a", "c"], ["b", "c", "a"], ["c", "b", "a"], ["c", "a", "b"]]
 
 func combine<T>(_ elements: [T], _ k: Int) -> [[T]] {
     var result = [[T]]()   // To store the final combinations
