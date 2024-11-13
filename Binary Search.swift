@@ -1,3 +1,23 @@
+func binarySearch<T: Comparable>(_ array: [T], target: T, left: Int, right: Int) -> Int {
+    var left = left
+    var right = right
+
+    while left <= right {
+        let mid = left + (right - left) / 2
+        if array[mid] == target {
+            return mid
+        } else if array[mid] < target {
+            left = mid + 1
+        } else {
+            right = mid - 1
+        }
+    }
+
+    return -1 // Target not found
+}
+
+
+
 //this will return left most index
 func binarySearchLeft(_ nums: [Int], _ left: Int, _ right: Int, _ target: Int) -> Int {
     var left = left
@@ -35,3 +55,5 @@ private func binarySearchRight(_ nums: [Int], _ left: Int, _ right: Int, _ targe
 }
 
 binarySearchLeft([1,2,3,4,5,6,7], 1, 6, 8)
+
+
